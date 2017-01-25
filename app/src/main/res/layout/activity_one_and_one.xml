@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_one_and_one"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.peter.functionassistant.OneAndOne">
+    <LinearLayout
+        android:id="@+id/ll_userInfo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/tab_me_rl_userInfo"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rl_title_bar"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#000000"
+                >
+
+                <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/btn_back_white"/>
+
+                <TextView
+                    android:id="@+id/id_shop_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="8dp"
+                    android:text="一元一次方程"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"/>
+                />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/xingshi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:text="形式 ：ax = b"
+            android:textColor="#000000"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/inputparameters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="请输入参数："
+            android:textColor="#000000"/>
+        <RelativeLayout
+            android:layout_below="@id/inputparameters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="130dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="a = "
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:id="@+id/textView2" />
+
+            <EditText
+                android:id="@+id/editTexta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=" ?"
+                android:maxLines="1"
+                android:maxLength="18"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:inputType="number"
+                android:digits="0123456789.-"
+                android:layout_marginLeft="150dp"
+                android:layout_marginStart="150dp"/>
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="b = "
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="130dp"/>
+            <EditText
+                android:id="@+id/editTextb"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=" ?"
+                android:maxLines="1"
+                android:maxLength="18"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:inputType="number"
+                android:digits="0123456789.-"
+                android:layout_marginLeft="150dp"
+                android:layout_marginStart="150dp"/>
+
+            <Button
+                android:layout_gravity="end"
+                android:id="@+id/btnoneandonesolve"
+                android:layout_width="48dp"
+                android:layout_height="36dp"
+                android:text="求解"
+                android:textColor="#ff0000"
+                android:textSize="12sp"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_alignBottom="@+id/tv3"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_functionanswer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="方程解："
+            android:textColor="#000000"/>
+        <LinearLayout
+            android:layout_below="@+id/tv_functionanswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginLeft="130dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x = "
+                android:textColor="#000000"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/functionanswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:text=" ?"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
